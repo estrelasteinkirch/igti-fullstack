@@ -1,0 +1,45 @@
+{
+  "nextId": 10,
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Estrela atualizado",
+      "balance": 101212
+    },
+    {
+      "id": 2,
+      "name": "PIZOOO",
+      "balance": 12
+    },
+    {
+      "id": 3,
+      "name": "Estrela atualizado",
+      "balance": 2002
+    },
+    {
+      "id": 5,
+      "name": "coleee",
+      "balance": 12
+    },
+    {
+      "id": 6,
+      "name": "coleeeto",
+      "balance": 0
+    },
+    {
+      "id": 7,
+      "name": "coleeeto",
+      "balance": 2654
+    },
+    {
+      "id": 8,
+      "name": "coleeeto",
+      "balance": 11
+    },
+    {
+      "id": 9,
+      "name": "coledsdsdsdseeto",
+      "balance": 11
+    }
+  ]
+}

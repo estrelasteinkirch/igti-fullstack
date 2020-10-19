@@ -1,0 +1,1 @@
+{"nome":"pushito","idade":12,"fofo":true}

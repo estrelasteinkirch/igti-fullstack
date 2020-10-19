@@ -1,0 +1,24 @@
+2020-10-11T15:49:19.226Z [my-app] error: Error Log
+2020-10-11T15:49:19.232Z [my-app] info: Info Log
+2020-10-11T15:49:19.232Z [my-app] verbose: Verbose Log
+2020-10-11T15:49:19.233Z [my-app] debug: Debug Log
+2020-10-11T15:49:19.233Z [my-app] silly: Silly Log
+2020-10-11T15:49:19.234Z [my-app] info: Hello with parameter!
+2020-10-11T15:50:17.800Z [my-app] error: Error Log
+2020-10-11T15:50:17.806Z [my-app] info: Info Log
+2020-10-11T15:50:17.806Z [my-app] verbose: Verbose Log
+2020-10-11T15:50:17.809Z [my-app] debug: Debug Log
+2020-10-11T15:50:17.818Z [my-app] silly: Silly Log
+2020-10-11T15:50:17.818Z [my-app] info: Hello with parameter!
+2020-10-11T15:50:21.599Z [my-app] error: Error Log
+2020-10-11T15:50:21.602Z [my-app] info: Info Log
+2020-10-11T15:50:21.602Z [my-app] verbose: Verbose Log
+2020-10-11T15:50:21.602Z [my-app] debug: Debug Log
+2020-10-11T15:50:21.603Z [my-app] silly: Silly Log
+2020-10-11T15:50:21.694Z [my-app] info: Hello with parameter!
+2020-10-11T15:50:23.557Z [my-app] error: Error Log
+2020-10-11T15:50:23.595Z [my-app] info: Info Log
+2020-10-11T15:50:23.596Z [my-app] verbose: Verbose Log
+2020-10-11T15:50:23.597Z [my-app] debug: Debug Log
+2020-10-11T15:50:23.598Z [my-app] silly: Silly Log
+2020-10-11T15:50:23.599Z [my-app] info: Hello with parameter!

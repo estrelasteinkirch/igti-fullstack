@@ -1,0 +1,134 @@
+2020-10-12T18:15:19.532Z [my-bank-api] info: API started and File Created
+2020-10-12T18:15:46.508Z [my-bank-api] error: ENOENT: no such file or directory, open 'accounts.json' 
+2020-10-12T18:16:34.105Z [my-bank-api] info: API started and File Created
+2020-10-12T18:17:49.842Z [my-bank-api] info: API started!
+2020-10-12T18:17:51.850Z [my-bank-api] info: API started!
+2020-10-12T18:17:57.404Z [my-bank-api] info: API started!
+2020-10-12T18:18:00.062Z [my-bank-api] info: API started!
+2020-10-12T18:18:06.537Z [my-bank-api] info: API started!
+2020-10-12T18:18:12.742Z [my-bank-api] info: API started!
+2020-10-12T18:18:14.178Z [my-bank-api] info: API started!
+2020-10-12T18:18:18.912Z [my-bank-api] info: API started!
+2020-10-12T18:18:20.146Z [my-bank-api] info: API started!
+2020-10-12T18:18:23.861Z [my-bank-api] info: API started!
+2020-10-12T18:18:44.901Z [my-bank-api] error: POST /account ENOENT: no such file or directory, open 'accounts.json' 
+2020-10-12T18:19:07.163Z [my-bank-api] info: API started and File Created
+2020-10-12T18:19:56.678Z [my-bank-api] info: API started!
+2020-10-12T18:19:59.209Z [my-bank-api] info: API started!
+2020-10-12T18:20:01.376Z [my-bank-api] info: API started!
+2020-10-12T18:20:09.847Z [my-bank-api] info: API started!
+2020-10-12T18:20:12.506Z [my-bank-api] info: API started!
+2020-10-12T18:20:27.316Z [my-bank-api] info: API started!
+2020-10-12T18:20:29.868Z [my-bank-api] info: API started!
+2020-10-12T18:20:37.818Z [my-bank-api] info: API started!
+2020-10-12T18:20:40.424Z [my-bank-api] info: API started!
+2020-10-12T18:20:44.263Z [my-bank-api] info: API started!
+2020-10-12T18:20:52.378Z [my-bank-api] info: API started!
+2020-10-12T18:21:00.474Z [my-bank-api] info: API started!
+2020-10-12T18:21:03.295Z [my-bank-api] info: API started!
+2020-10-12T18:21:06.261Z [my-bank-api] info: API started!
+2020-10-12T18:21:16.008Z [my-bank-api] info: API started!
+2020-10-12T18:21:23.842Z [my-bank-api] info: API started!
+2020-10-12T18:21:29.899Z [my-bank-api] info: API started!
+2020-10-12T18:21:43.179Z [my-bank-api] info: API started!
+2020-10-12T18:21:49.334Z [my-bank-api] info: API started!
+2020-10-12T18:21:58.895Z [my-bank-api] info: API started!
+2020-10-12T18:22:05.774Z [my-bank-api] info: API started!
+2020-10-12T18:22:10.664Z [my-bank-api] info: API started!
+2020-10-12T18:22:11.898Z [my-bank-api] info: API started!
+2020-10-12T18:22:14.918Z [my-bank-api] info: API started!
+2020-10-12T18:22:35.793Z [my-bank-api] info: API started!
+2020-10-12T18:23:21.281Z [my-bank-api] info: API started!
+2020-10-12T18:23:38.258Z [my-bank-api] info: API started!
+2020-10-12T18:23:44.885Z [my-bank-api] info: API started!
+2020-10-12T18:23:49.348Z [my-bank-api] info: API started!
+2020-10-12T18:23:58.235Z [my-bank-api] info: API started!
+2020-10-12T18:24:09.235Z [my-bank-api] info: API started!
+2020-10-12T18:24:10.082Z [my-bank-api] info: API started!
+2020-10-12T18:24:14.119Z [my-bank-api] info: API started!
+2020-10-12T18:24:17.698Z [my-bank-api] info: API started!
+2020-10-12T18:24:26.878Z [my-bank-api] info: API started!
+2020-10-12T18:24:45.722Z [my-bank-api] info: API started!
+2020-10-12T18:25:00.214Z [my-bank-api] info: POST /account - {"id":1,"name":"Raytos","balance":123}
+2020-10-12T18:25:21.011Z [my-bank-api] info: PUT /account - {"id":1,"name":"Estrela atualizado","balance":2002}
+2020-10-12T18:25:34.797Z [my-bank-api] info: POST /account - {"id":2,"name":"PIZOOO","balance":12}
+2020-10-12T18:25:40.686Z [my-bank-api] info: GET /account/:id
+2020-10-12T18:25:55.422Z [my-bank-api] info: POST /account - {"id":3,"name":"Cookiemonzinho","balance":132}
+2020-10-12T18:26:20.470Z [my-bank-api] info: PATCH /account/updateBalance - {"id":1,"name":"Estrela atualizado","balance":101212}
+2020-10-12T18:26:51.194Z [my-bank-api] error: PATCH /account - Cannot set property 'balance' of undefined 
+2020-10-12T18:27:11.428Z [my-bank-api] info: PATCH /account/updateBalance - {"id":3,"name":"Cookiemonzinho","balance":2}
+2020-10-12T18:32:08.808Z [my-bank-api] info: POST /account - {"id":4}
+2020-10-12T18:32:52.992Z [my-bank-api] info: API started!
+2020-10-12T18:32:55.036Z [my-bank-api] info: API started!
+2020-10-12T18:33:28.293Z [my-bank-api] info: API started!
+2020-10-12T18:33:31.734Z [my-bank-api] info: API started!
+2020-10-12T18:33:33.941Z [my-bank-api] info: API started!
+2020-10-12T18:33:35.526Z [my-bank-api] info: API started!
+2020-10-12T18:33:43.614Z [my-bank-api] info: API started!
+2020-10-12T18:33:52.044Z [my-bank-api] info: API started!
+2020-10-12T18:33:54.109Z [my-bank-api] info: API started!
+2020-10-12T18:34:04.045Z [my-bank-api] info: API started!
+2020-10-12T18:34:07.477Z [my-bank-api] info: API started!
+2020-10-12T18:34:37.311Z [my-bank-api] error: POST /account - Name e Balance sao obrigatórios 
+2020-10-12T18:34:53.605Z [my-bank-api] info: API started!
+2020-10-12T18:34:56.477Z [my-bank-api] info: API started!
+2020-10-12T18:34:58.013Z [my-bank-api] info: API started!
+2020-10-12T18:35:05.725Z [my-bank-api] error: POST /account - Name e Balance sao obrigatórios 
+2020-10-12T18:35:26.574Z [my-bank-api] error: POST /account - Unexpected token ] in JSON at position 278 
+2020-10-12T18:37:04.954Z [my-bank-api] info: API started!
+2020-10-12T18:38:48.356Z [my-bank-api] info: API started!
+2020-10-12T18:39:04.457Z [my-bank-api] info: API started!
+2020-10-12T18:39:06.540Z [my-bank-api] info: API started!
+2020-10-12T18:39:16.226Z [my-bank-api] info: API started!
+2020-10-12T18:39:40.752Z [my-bank-api] info: API started!
+2020-10-12T18:42:11.397Z [my-bank-api] info: POST /account - {"id":5,"name":"coleee","balance":12}
+2020-10-12T18:46:51.023Z [my-bank-api] info: API started!
+2020-10-12T18:46:52.231Z [my-bank-api] info: API started!
+2020-10-12T18:47:12.556Z [my-bank-api] info: POST /account - {"id":6,"name":"coleeeto","balance":0}
+2020-10-12T18:47:43.320Z [my-bank-api] info: API started!
+2020-10-12T18:48:10.740Z [my-bank-api] info: API started!
+2020-10-12T18:48:11.130Z [my-bank-api] info: API started!
+2020-10-12T18:48:33.700Z [my-bank-api] info: POST /account - {"id":7,"name":"coleeeto","balance":0}
+2020-10-12T18:48:41.394Z [my-bank-api] info: POST /account - {"id":8,"name":"coleeeto","balance":11}
+2020-10-12T18:49:30.627Z [my-bank-api] info: API started!
+2020-10-12T18:50:35.681Z [my-bank-api] info: API started!
+2020-10-12T18:50:36.543Z [my-bank-api] info: API started!
+2020-10-12T18:50:41.563Z [my-bank-api] info: API started!
+2020-10-12T18:50:45.256Z [my-bank-api] info: API started!
+2020-10-12T18:50:49.680Z [my-bank-api] info: API started!
+2020-10-12T18:50:52.254Z [my-bank-api] info: API started!
+2020-10-12T18:51:15.292Z [my-bank-api] info: API started!
+2020-10-12T18:51:22.075Z [my-bank-api] info: API started!
+2020-10-12T18:51:24.187Z [my-bank-api] info: API started!
+2020-10-12T18:51:37.785Z [my-bank-api] error: PUT /account - Registro não encontrado. 
+2020-10-12T18:51:56.223Z [my-bank-api] info: PUT /account - {"id":3,"name":"Estrela atualizado","balance":2002}
+2020-10-12T18:52:31.739Z [my-bank-api] info: API started!
+2020-10-12T18:52:46.234Z [my-bank-api] info: API started!
+2020-10-12T18:52:54.029Z [my-bank-api] error: PUT /account - Name e Balance sao obrigatórios 
+2020-10-12T18:53:22.223Z [my-bank-api] info: API started!
+2020-10-12T18:53:27.341Z [my-bank-api] info: API started!
+2020-10-12T18:53:33.003Z [my-bank-api] info: API started!
+2020-10-12T18:53:45.691Z [my-bank-api] info: API started!
+2020-10-12T18:53:52.787Z [my-bank-api] info: API started!
+2020-10-12T18:53:59.728Z [my-bank-api] info: GET /account
+2020-10-12T18:54:20.766Z [my-bank-api] info: POST /account - {"id":9,"name":"coledsdsdsdseeto","balance":11}
+2020-10-12T18:54:49.089Z [my-bank-api] info: API started!
+2020-10-12T18:54:51.299Z [my-bank-api] info: API started!
+2020-10-12T18:55:01.788Z [my-bank-api] info: API started!
+2020-10-12T18:55:03.543Z [my-bank-api] info: API started!
+2020-10-12T18:55:15.371Z [my-bank-api] info: API started!
+2020-10-12T18:56:22.234Z [my-bank-api] info: API started!
+2020-10-12T18:56:25.301Z [my-bank-api] info: API started!
+2020-10-12T18:56:28.517Z [my-bank-api] info: API started!
+2020-10-12T18:56:31.723Z [my-bank-api] info: API started!
+2020-10-12T18:56:33.571Z [my-bank-api] info: API started!
+2020-10-12T18:56:43.535Z [my-bank-api] info: API started!
+2020-10-12T18:57:05.961Z [my-bank-api] info: PATCH /account/updateBalance - {"id":7,"balance":2}
+2020-10-12T18:57:08.876Z [my-bank-api] error: PATCH /account - Registro não encontrado. 
+2020-10-12T18:57:32.450Z [my-bank-api] info: API started!
+2020-10-12T18:57:37.132Z [my-bank-api] info: API started!
+2020-10-12T18:57:40.069Z [my-bank-api] info: API started!
+2020-10-12T18:57:54.802Z [my-bank-api] info: PATCH /account/updateBalance - {"id":7,"balance":2654}
+2020-10-13T09:59:50.251Z [my-bank-api] info: API started!
+2020-10-13T12:39:38.573Z [my-bank-api] info: API started!
+2020-10-13T12:43:04.592Z [my-bank-api] info: GET /account
