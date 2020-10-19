@@ -1,0 +1,40 @@
+body {
+  background-color: #b57ded;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dados-pessoais {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.foto {
+  max-width: 100px;
+}
+
+#dados {
+  margin: 10px;
+  list-style-type: disc;
+}
+
+table,
+tr,
+td,
+th {
+  padding: 5px;
+  border: 1px solid gray;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+th {
+  background-color: rgba(238, 63, 254, 0.598);
+}

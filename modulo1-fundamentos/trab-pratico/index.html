@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      #quadrado {
+        background-color: transparent;
+        height: 100px;
+        width: 100px;
+        margin: 45px;
+        border: 1px solid black ;
+      }
+
+    </style>
+    <title>Trabalho Prático fofo e colorido</title>
+  </head>
+  <body>
+    <form>
+      <div>
+        <label for="range-red"> (R) - Vermelho </label>
+        <input type="range" id="range-red" value="0" min="0" max="255" />
+        <input type="text" id="number-red" disabled />
+      </div>
+
+      <div>
+        <label for="range-green">(G) - Verde </label>
+        <input type="range" id="range-green" value="0" min="0" max="255" />
+        <input type="text" id="number-green" disabled />
+      </div>
+
+      <div>
+        <label for="range-blue">(B) - Azul </label>
+        <input type="range" id="range-blue" value="0" min="0" max="255" />
+        <input type="text" id="number-blue" disabled />
+      </div>
+    
+    </form>
+
+    <div id="quadrado">
+      
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
