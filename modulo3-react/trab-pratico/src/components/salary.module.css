@@ -1,0 +1,61 @@
+.title {
+  text-align: center;
+}
+.container {
+  /* background-color: lime; */
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.descontos {
+  display: flex;
+  flex-direction: row;
+  min-width: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.descontos div {
+  width: 24%;
+}
+
+.inss {
+  color: #e67e22 !important;
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.irpf {
+  color: #c0392b !important;
+  font-size: 20px;
+
+  font-weight: bold;
+}
+
+.net {
+  color: #16a085 !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.progressBar {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.INSSBar {
+  background-color: #e67e22;
+}
+
+.IRPFBar {
+  background-color: #c0392b;
+}
+
+.netBar {
+  background-color: #16a085;
+}
