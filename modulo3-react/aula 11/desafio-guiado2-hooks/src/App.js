@@ -1,83 +1,70 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import Countries from "./components/countries/Countries";
 import Header from "./components/header/Header";
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      allCountries: [],
-      filteredCountries: [],
-      filteredPopulation: 0,
-      filter: "", //valor vazio pro react controlar. Nao deixar null/undefined
+export default function App() {
+  const [allCountries, setAllCountries] = useState([]);
+  const [filteredCountries, setFilteredCountries] = useState([]);
+  const [filteredPopulation, setFilteredPopulation] = useState(0);
+  const [filter, setUserFilter] = useState("");
+
+  useEffect(() => {
+    const getCountries = async () => {
+      const res = await fetch("http://restcountries.eu/rest/v2/all");
+      let allCountries = await res.json();
+
+      allCountries = allCountries.map(
+        ({ name, numericCode, flag, population }) => {
+          return {
+            id: numericCode,
+            name,
+            filterName: name.toLowerCase(),
+            flag,
+            population,
+          };
+        }
+      );
+      setAllCountries(allCountries);
+      setFilteredCountries(Object.assign([], allCountries));
     };
-  }
-  async componentDidMount() {
-    const res = await fetch("http://restcountries.eu/rest/v2/all");
-    const json = await res.json();
-    const allCountries = json.map(({ name, numericCode, flag, population }) => {
-      return {
-        id: numericCode,
-        name,
-        filterName: name.toLowerCase(),
-        flag,
-        population,
-      };
-    });
-    const filteredPopulation = this.calculateTotalPopulationFrom(allCountries);
+    getCountries();
+  }, []);
+  // const filteredPopulation = calculateTotalPopulationFrom(allCountries);
 
-    this.setState({
-      allCountries,
-      //fazer uma cópia para nao apontar para o mesmo local em memória
-      filteredCountries: Object.assign([], allCountries),
-      filteredPopulation,
-    });
-  }
-
-  calculateTotalPopulationFrom = (countries) => {
+  const calculateTotalPopulationFrom = (countries) => {
     const totalPopulation = countries.reduce((accumulator, current) => {
       return accumulator + current.population;
     }, 0);
     return totalPopulation;
   };
 
-  handleChangeFilter = (newText) => {
-    this.setState({
-      filter: newText,
-    });
+  const handleChangeFilter = (newText) => {
+    setUserFilter(newText);
+
     const filterLowerCase = newText.toLowerCase();
 
-    const filteredCountries = this.state.allCountries.filter((country) => {
+    const filteredCountries = allCountries.filter((country) => {
       return country.filterName.includes(filterLowerCase);
     });
-    const filteredPopulation = this.calculateTotalPopulationFrom(
-      filteredCountries
-    );
+    const filteredPopulation = calculateTotalPopulationFrom(filteredCountries);
 
-    this.setState({
-      filteredCountries,
-      filteredPopulation,
-    });
+    setFilteredCountries(filteredCountries);
+    setFilteredPopulation(filteredPopulation);
   };
 
-  render() {
-    const { filteredCountries, filter, filteredPopulation } = this.state;
-
-    return (
-      <div className="container">
-        <h1 style={ styles.centeredTitle}>React Countries</h1>
-        <Header
-          filter={filter}
-          countryCount={filteredCountries.length}
-          totalPopulation={filteredPopulation}
-          onChangeFilter={this.handleChangeFilter}
-        />
-        <Countries countries={filteredCountries} />
-      </div>
-    );
-  }
+  return (
+    <div className="container">
+      <h1 style={styles.centeredTitle}>React Countries</h1>
+      <Header
+        filter={filter}
+        countryCount={filteredCountries.length}
+        totalPopulation={filteredPopulation}
+        onChangeFilter={handleChangeFilter}
+      />
+      <Countries countries={filteredCountries} />
+    </div>
+  );
 }
-
 const styles = {
   centeredTitle: {
     textAlign: "center",
