@@ -1,48 +1,32 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import User from "./User";
 
-export default class Users extends Component {
-  constructor() {
-    super();
-    this.state = {
-      secondsVisible: 0,
-    };
-    this.interval = null;
-  }
+export default function Users({ users }) {
+  const [secondsVisible, setSecondsVisible] = useState(0);
 
-  componentDidMount() {
-    this.interval = setInterval(() => {
-      const { secondsVisible } = this.state;
-      this.setState({
-        secondsVisible: secondsVisible + 1,
-      });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSecondsVisible(secondsVisible + 1);
     }, 1000);
-  }
-  componentDidUpdate() {
-    //executado após toda invocação de render() e  útil para aplicaçao de "efeitos colaterais"
-    console.log("componentDidUpdate de Users.js");
-  }
-  componentWillUnmount() {
-    //vazamento de memória: nao pode fazer uma mudança de estado de um componente que foi desmontado (retirado do) no DOM.
-    clearInterval(this.interval);
-  }
-  render() {
-    const { users } = this.props;
-    const { secondsVisible } = this.state;
-    return (
-      <div>
-        <p>Componente Users visíveis por {secondsVisible} segundos</p>
-        <ul>
-          {users.map((user) => {
-            const { login } = user;
-            return (
-              <li key={login.uuid}>
-                <User user={user} />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    );
-  }
+    return () => {
+     clearInterval(interval);
+    };
+  }, [secondsVisible]);
+  //[] vazios faz uma vez só, se colocar elementos do estado, o react verifica se alterou. Se alterar ele roda de novo
+
+  return (
+    <div>
+      <p>Componente Users visíveis por {secondsVisible} segundos</p>
+      <ul>
+        {users.map((user) => {
+          const { login } = user;
+          return (
+            <li key={login.uuid}>
+              <User user={user} />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
