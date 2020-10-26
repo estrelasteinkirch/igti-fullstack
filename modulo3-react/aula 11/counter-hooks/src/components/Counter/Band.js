@@ -1,33 +1,28 @@
-import React, { Component } from "react";
+import React, {useState} from "react";
 
-//interpolação de arrays
+const BAND_MEMBERS = [
+  {
+    id: 1,
+    name: "Neil Peart",
+    instrument: "Bateria",
+  },
+  {
+    id: 2,
+    name: "Alex Fifeson",
+    instrument: "Guitarra",
+  },
+  {
+    id: 3,
+    name: "Geddy Lee",
+    instrument: "Baixo",
+  },
+];
 
-export default class Band extends Component {
-  constructor() {
-    super();
-    this.state = {
-      bandName: "Rush",
-      bandMembers: [
-        {
-          id: 1,
-          name: "Neil Peart",
-          instrument: "Bateria",
-        },
-        {
-          id: 2,
-          name: "Alex Fifeson",
-          instrument: "Guitarra",
-        },
-        {
-          id: 3,
-          name: "Geddy Lee",
-          instrument: "Baixo",
-        },
-      ],
-    };
-  }
-  render() {
-    const { bandName, bandMembers } = this.state;
+export default function Band() {
+//nome da variável de estado, nome da funçao que vai alterá-la
+  const [ bandMembers, setBandMembers ] = useState(BAND_MEMBERS);
+  const [ bandName, setBandName ] = useState('Rush');
+ 
     return (
       <div>
         <h4>{bandName}</h4>
@@ -42,5 +37,4 @@ export default class Band extends Component {
         </ul>
       </div>
     );
-  }
 }
