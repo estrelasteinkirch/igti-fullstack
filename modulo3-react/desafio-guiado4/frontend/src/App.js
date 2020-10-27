@@ -45,7 +45,7 @@ export default function App() {
     <div>
       <h1 className="center"> Controle de Notas</h1>
       {/* sendo verdadeiro, faça isso */}
-      {allGrades.length == 0 && <Spinner />}
+      {allGrades.length === 0 && <Spinner />}
       {allGrades.length > 0 && (
         <GradesControl
           grades={allGrades}
