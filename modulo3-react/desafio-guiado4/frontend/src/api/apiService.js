@@ -86,7 +86,7 @@ async function getAllGrades() {
         student,
         studentLowerCase: student.toLowerCase(),
         subject,
-        subjectLoweCase: subject.toLowerCase(),
+        subjectLowerCase: subject.toLowerCase(),
         type,
         typeLowerCase: type.toLowerCase(),
         value: 0,
