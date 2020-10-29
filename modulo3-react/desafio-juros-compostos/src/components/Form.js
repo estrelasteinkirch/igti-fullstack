@@ -1,14 +1,14 @@
 import React from "react";
 
-const MAX_VALUE_INTEREST = -12;
-const MIN_VALUE_INTEREST = 12;
+const MAX_VALUE_TAX = -12;
+const MIN_VALUE_TAX = 12;
 
 export default function Form({
   initialValue,
   months,
-  interest,
+  tax,
   onChangeInitialValue,
-  onChangeInterest,
+  onChangeTax,
   onChangeMonths,
 }) {
   return (
@@ -21,21 +21,21 @@ export default function Form({
           id="inputInitialValue"
           type="number"
           value={initialValue}
-          step="1000"
+          step="100"
           onChange={onChangeInitialValue}
           autoFocus
         />
       </div>
       <div className="input-field">
-        <label className="active" htmlFor="inputInterest">
+        <label className="active" htmlFor="inputTax">
           Taxa de juros mensal:
         </label>
         <input
-          id="inputInitialValue"
+          id="inputTax"
           type="number"
-          value={interest}
-          step="1"
-          onChange={onChangeInterest}
+          value={tax}
+          step="0.1"
+          onChange={onChangeTax}
 
           // size="5000"
           // min={MIN_VALUE_INTEREST}
@@ -64,7 +64,7 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-around",
-    marginBottom: "40px",
+    margin: "40px",
   },
 
   // title: {

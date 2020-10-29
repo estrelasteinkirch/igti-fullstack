@@ -1,0 +1,51 @@
+.border {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.installment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  
+}
+.position{
+  font-weight: bold;
+}
+
+.percentage {
+  font-weight: none;
+
+}
+.percentage.positive{
+  color: rgb(22, 88, 255);
+}
+
+.percentage.negative{
+
+  color: rgb(255, 140, 39);
+}
+
+.positive {
+  color: rgb(23, 99, 38);
+}
+
+.negative {
+  color: red;
+}
