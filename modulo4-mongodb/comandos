@@ -1,0 +1,161 @@
+
+db
+mostra em que base de dados está
+
+db.students.drop(): apaga a coleção
+
+show collections
+
+db.createCollection("student")
+
+db.students.insert({"name":"Fernando"})
+
+# insersir 1 e muitos:
+
+db.COLLECTION.insertOne({});
+db.student.insertOne({name: "Maria dos Anjos"});
+
+
+db.student.insertMany([{name: "Marco Antonio", subject: "React", type: "Trabalho Prático", value: 10.3},{name: "Aline dos Santos", subject: "Node", type: "Desafio", value: 35.4}]);
+
+db.student.insert({}) -> pode inserir um ou mais docmentos
+
+db.student.insert([{name: "Bryan Moreno", subject: "MongoDB", type: "Exercicio", value: 9.9},{name: "Mabi Adriane", subject: "Node", type: "Desafio"}]);
+
+
+# SELECT
+db.COLLECTION.find()
+db.student.find()
+db.student.find(query, projection) #projection: campos que quer que apareça na projeção
+db.student.find({}, {_id:0, name:1, value:1}).limit(2).skip(1)
+
+db.student.find({}, {_id:0, name:1, value:1}).sort({name:1})
+
+findOne: traz o primeiro registo
+
+
+db.student.find({$and:[{subject: "Node"},{type: "Desafio"}]}, {_id:0}).pretty()
+
+$and:[{subject: "Node"},{type: "Desafio"}] -> traz todos com esses
+$not: -> inverte o critério
+$nor: -> retorna todos os docs que nao atendem esse critério
+$or: [{subject: "Node"}, {subject: "React"}]->
+
+#Operadores de comparação:
+$eq = 
+$gt >
+$gte >=
+$in 
+$lt <
+$lte <=
+$ne !=
+$nin
+
+db.student.find({value: {$gt: 20}}, {_id:0}).pretty()
+
+db.student.find({$not:[{subject: "Node"}]}, {_id:0}).pretty()
+
+UPDATE
+One: atualiza a primeira ocorrencia do documento
+
+db.student.updateOne({query}, update, options)
+
+#exemplo:
+db.student.updateOne({name: "Mabi Adriane", subject: "Node"}, {$set: {type: "Prova final"}})
+
+db.student.updateOne({name: "Maria dos Anjos", subject: "Node"}, {$inc: {value: 10}}) 
+
+#inc: incrementa
+
+#MANY: 
+db.COLLECTION.updateMany({query}, update, options)
+
+db.student.updateMany({subject: "Node", type: "Prova final"}, {$inc: {value: 10}})
+
+db.student.updateMany({}, { $currentDate:{lastModified: true, timestamp: {$type: "timestamp"}}})
+
+db.student.updateMany({}, { $set:{lastModified: "$$NOW", timestamp: "$$CLUSTER_TIME"}})
+
+#UNSET: remove um campos
+db.student.updateMany({},{$unset:{timestamp:1}})
+
+#REPLACEONE: substitui todo documento por outro
+db.COLLECTION.replaceOne({query}, update, options)
+
+db.student.replaceOne({_id: ObjectId("5f9d9cfb18f79b40ba823881")}, {name: "Tatiane da Silva", subject:"Angular", type:"Trablho Prático", value: 12.2, lastModified: "$$NOW"})
+
+#DELETE
+db.COLLECTION.deleteOne(filter)
+
+db.student.deleteOne({_id: ObjectId("5f9d9e5718f79b40ba823884")})
+
+db.student.deleteMany({subject: "Node"})
+
+
+BULKWRITE no MongoDB: Comandos em massa
+
+db.COLLECTION.bulkWrite([operacao1, operacao2, ...], options)
+
+db.student.bulkWrite([
+    {insertOne:{
+         "document": {name:"Elisete Prux", subject:"React", type: "Desafio", value: 49, timestamp: new Date()}
+    }},
+    {insertOne:{
+         "document": {name:"Guega Prux", subject:"Vue", type: "Desafio", value: 19, timestamp: new Date()}
+    }},
+    {updateOne:{
+        "filter":{name: "Bryan Moreno"},
+        "update":{$set: {subject: "Ruby"}}
+    }},
+    {replaceOne:{
+      "filter":{_id: ObjectId("5f9d9e5718f79b40ba823885")}, "replacement": {name: "Ysrael Moreno", subject:"Vue", type: "Trabalho Prático", value: 9.7, timestamp: new Date()}
+    }}
+], {ordered: false})
+
+
+INDICES
+
+db.COLLECTION.getIndexes()
+db.COLLECTION.createIndex({campo:-1})
+
+# exclusao pelo nome do indice:
+db.COLLECTION.dropIndex("name_-1") 
+# exclusao pelo nome do índice
+db.COLLECTION.dropIndex({name:-1}) 
+# exclusao de todos os índeces (exceto _id)
+db.COLLECTION.dropIndexes() 
+
+
+
+db.student.createIndex({name:-1})
+db.student.dropIndex("name_-1")
+
+INDICES TEXTUAIS
+
+db.COLLECTION.createIndex({campo: "text"})
+db.COLLECTION.find({$text: {$search: "escritora jornalista"}}, {score: {$meta: "textScore"}}).sort({score: {$meta: "textScore"}}).limit(3)
+
+AGREGAÇÃO
+
+db.COLLECTION.aggregate([
+{$project: {}},
+{$match: {campo: "X"}},
+{$group: {_id: "$campo", total {$sum: "$campo"}}},
+{$sort: {campo1: 1, campo2: -1}},
+{$skip: N},
+{$limit: N}
+])
+
+db.student.aggregate([
+{$group: {_id: {subject: "$subject", type: "$type"}, total: {$sum: "$value"}}},
+{$sort: {_id: 1}}
+])
+
+db.COLLECTION.count(<query>)
+db.student.count({subject: "Node"})
+
+# valor mais exato:
+db.COLLECTION.countDocuments(<query>)
+
+db.COLLECTION.distinct(field, query)
+db.student.distinct("subject")

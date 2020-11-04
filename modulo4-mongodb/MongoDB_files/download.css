@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+/* override god-awful blue diamonds pattern */
+html {
+    background-image: none;
+    background-color: #00afa2;
+}
+
+/*#application {
+  display: none;
+}*/
+
+/* display logo */
+#f1_container {
+    background: url("https://instructure-uploads.s3.amazonaws.com/account_109160000000000001/attachments/832/logo%20igti%20white.png") no-repeat center top;
+    background-size: 100% auto;
+    width: 302px;
+}
+
+/* update "Forgot Password?" link color/style */
+#f1_container a {
+    color: white;
+    text-decoration: none;
+}
+
+/* PROGRESS BAR */
+.progress_bar {
+  float: left;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.progress_bar .progress_bar_title {
+  box-sizing: border-box;
+  color: hsl(0, 0%, 13%);
+  float: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  width: 100%;
+}
+.progress_bar .pro-bar {
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 90%);
+  box-sizing: border-box;
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 100%;
+}
+.progress_bar .pro-bg {
+  background-color: white;
+  float: left;
+  height: 10px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.progress_bar .progress-bar-inner {
+  float: left;
+  height: 10px;
+  left: 0;
+  margin-top: -10px;
+  position: relative;
+  top: 0;
+  z-index: 100;
+}
+
+.ic-Login {
+  height: 95vh !important;
+}
+
+.ic-Login__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ANIMATED CSS */
