@@ -2,11 +2,18 @@ import express from "express";
 import mongoose from "mongoose";
 import {studentRouter} from "./routes/student-router.js"
 
+require("dotenv").config();
+
+process.env.USER_DB = "estrela"
+
+const app = express();
+
 //conectando ao Mongo Atlas pelo mongoose
 (async () => {
   try {
     mongoose.connect(
-      "mongodb+srv://estrela:9J5agwfBiSUn7ht@bootcampigti.lhqbu.mongodb.net/grades?retryWrites=true&w=majority",
+      `mongodb+srv://${
+        process.env.USERDB}:${process.env.PWDDB}@bootcampigti.lhqbu.mongodb.net/grades?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -18,11 +25,8 @@ import {studentRouter} from "./routes/student-router.js"
 })();
 
 
-
-const app = express();
-
 app.use(express.json())
 app.use(studentRouter);
 
-app.listen(3000, ()=> console.log("API Iniciada"));
+app.listen([process.env.PORT], ()=> console.log("API Iniciada"));
 
