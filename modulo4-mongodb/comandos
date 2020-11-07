@@ -1,3 +1,13 @@
+iniciar o Mongo:
+mongod --dbpath="caminho da pasta"
+mongod --dbpath="/Users/estrela/Estudos Estrela/iGTi/Fullstack/modulo4-mongodb/trab-pratico"
+
+abrir uma nova aba:
+mongo -host localhost:27017
+
+mostra todas as bases existentes no servidor local:
+show dbs
+
 
 db
 mostra em que base de dados está
@@ -17,6 +27,7 @@ db.student.insertOne({name: "Maria dos Anjos"});
 
 
 db.student.insertMany([{name: "Marco Antonio", subject: "React", type: "Trabalho Prático", value: 10.3},{name: "Aline dos Santos", subject: "Node", type: "Desafio", value: 35.4}]);
+db.accounts.insertMany(
 
 db.student.insert({}) -> pode inserir um ou mais docmentos
 
@@ -140,7 +151,7 @@ AGREGAÇÃO
 db.COLLECTION.aggregate([
 {$project: {}},
 {$match: {campo: "X"}},
-{$group: {_id: "$campo", total {$sum: "$campo"}}},
+{$group: {_id: "$campo", total: {$sum: "$campo"}}},
 {$sort: {campo1: 1, campo2: -1}},
 {$skip: N},
 {$limit: N}
