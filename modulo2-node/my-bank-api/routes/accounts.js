@@ -82,6 +82,7 @@ router.put("/", async (req, res, next) => {
     if (index === -1) {
       throw new Error("Registro não encontrado.");
     }
+  
 
     data.accounts[index].name = account.name;
     data.accounts[index].balance = account.balance;
